@@ -1,3 +1,5 @@
+# log-service.py
+
 from flask import Flask, request, abort, jsonify
 
 app = Flask(__name__)
@@ -15,7 +17,8 @@ def log_request():
         print("Received message:", _msg)
         return "Message logged successfully", 201
     elif request.method == "GET":
-        return jsonify(messages)
+        # return jsonify(messages)
+        return jsonify(list(messages.values()))
     else:
         abort(405)
 
