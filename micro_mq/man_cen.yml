@@ -1,0 +1,8 @@
+version: "3"
+services:
+    hc-management:
+      container_name: lab4-mc
+      image: hazelcast/management-center:latest
+      network_mode: hazelcast-network
+      ports:
+        - 8080:8080
