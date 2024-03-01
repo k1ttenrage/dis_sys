@@ -1,0 +1,11 @@
+version: "3"
+services:
+    hazelcast-3:
+        network_mode: 'hazelcast-network'
+        container_name: 'log_5703'
+        environment:
+            - 'HZ_NETWORK_PUBLICADDRESS=192.168.0.120:5703'
+            - HZ_CLUSTERNAME=lab5
+        ports:
+            - '5703:5701'
+        image: 'hazelcast/hazelcast:latest'
